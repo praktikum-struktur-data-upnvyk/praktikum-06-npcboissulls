@@ -94,9 +94,9 @@ bool dequeue(Queue& q, int& nomor) {
      return false;
     }
 
-    Node* bantu = new Node;
-    nomor = bantu->data;
+    Node* bantu = q.depan;
     q.depan = q.depan->next;
+    nomor = bantu->data;
 
     if(q.depan == nullptr){
      q.belakang = nullptr;
